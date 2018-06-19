@@ -23,8 +23,8 @@ export function handler(event, context, callback) {
     },
   })
   .then((response) => {
-    console.log('airtable response')
-    console.log(response)
+    // console.log('airtable response')
+    // console.log(response)
     return callback(null, {
       statusCode: 200,
       body: JSON.stringify({
@@ -33,8 +33,8 @@ export function handler(event, context, callback) {
     })
   })
   .catch((err) => {
-    console.log('airtable error')
-    console.log(err)
+    // console.log('airtable error')
+    // console.log(err)
     return callback(null, {
       body: JSON.stringify(err)
     })
