@@ -23,10 +23,10 @@ Ask us your questions about serverless functions and lets get to the bottom of t
     <input type="email" name="email" id="email">
   </p>
   <p>
-    <label for="questions">What Questions do you have about the Serverless Landscape?</label>
+    <label for="questions">What questions do you have about the serverless landscape?</label>
     <textarea name="questions" id="questions"></textarea>
   </p>
   <p>
-    <button type="submit" class="button">Ask Question!</button>
+    <button type="submit" class="button">Ask us anything!</button>
   </p>
 </form>
