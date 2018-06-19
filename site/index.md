@@ -7,7 +7,7 @@ layout: layouts/base.njk
 
 Ask a serverless question!
 
-<form name="swag-for-docs" netlify-honeypot="full-name" action="/thanks" netlify>
+<form name="serverless-questions" netlify-honeypot="full-name" action="/thanks" netlify>
   <p class="honey">
     <label>Your full name: <input name="full-name"></label>
     <input type="hidden" name="tab" id="tab" value="2">
