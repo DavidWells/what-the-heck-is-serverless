@@ -31,7 +31,7 @@ export function handler(event, context, callback) {
 
     return callback(null, {
       statusCode: err.statusCode,
-      body: err.message
+      body: err
     })
   })
 }
