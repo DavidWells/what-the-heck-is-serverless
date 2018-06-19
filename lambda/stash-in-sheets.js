@@ -38,11 +38,8 @@ export function handler(event, context, callback) {
       var new_row = {
         date: new Date(),
         name: body.data.name,
-        address: body.data.address,
-        zip: body.data.zip,
-        country: body.data.country,
         email: body.data.email,
-        comments: body.data.comments
+        questions: body.data.questions
       };
       doc.addRow(body.data.tab, new_row, function(err, row){
         if(err){
