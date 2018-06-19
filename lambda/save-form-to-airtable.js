@@ -7,7 +7,7 @@ export function handler(event, context, callback) {
       'Email': body.email,
       'Name': body.name,
       'Questions': body.questions,
-      'Date': new Date()
+      //'Date': new Date()
     }
   }
   console.log(airTableData)
@@ -20,17 +20,19 @@ export function handler(event, context, callback) {
     },
   })
   .then((response) => {
-    console.log(response.data)
+    console.log('airtable response')
+    console.log(response)
     return callback(null, {
       statusCode: 200,
-      body: JSON.stringify(response)
+      body: JSON.stringify({
+        success: true
+      })
     })
   })
   .catch((err) => {
-    console.log('AirTable Error', err)
-
+    console.log('airtable error')
+    console.log(err)
     return callback(null, {
-      statusCode: err.statusCode,
       body: err
     })
   })
