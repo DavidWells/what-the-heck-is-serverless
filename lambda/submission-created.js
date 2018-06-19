@@ -4,10 +4,12 @@ export function handler(event, context, callback) {
   console.log('Form submission', event)
   const body = JSON.parse(event.body);
   const airTableData = {
+    // Airtable Fields are case sensitive
     'fields': {
       'Email': body.email,
       'Name': body.name,
       'Questions': body.questions,
+      // Make sure the Date field is set to Date Type in airtable with "include time field" set
       'Date': new Date().toISOString()
     }
   }
