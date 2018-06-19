@@ -7,7 +7,7 @@ export function handler(event, context, callback) {
       'Email': body.email,
       'Name': body.name,
       'Questions': body.questions,
-      'Date': new Date()
+      'Date': new Date().toISOString()
     }
   }
   console.log(airTableData)
