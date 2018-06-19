@@ -4,8 +4,6 @@ layout: layouts/base.njk
 bodyClass: thanks
 ---
 
-![Sticker](/images/deploy-docs-netlify-sticker.png)
+# Wahoo! Thanks for the question!
 
-# Wahoo! We've got your info.
-
-Thanks for your question!
+We will be sorting through questions and answering them in a video soon!

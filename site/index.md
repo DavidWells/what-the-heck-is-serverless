@@ -3,9 +3,11 @@ title: Serverless Questions
 layout: layouts/base.njk
 ---
 
-# Serverless Questions
+# What the heck is Serverless?
 
-Ask a serverless question!
+Chris Coyier of CSSTricks & David Wells are teaming up to break down this whole "serverless" thing people have been talking about.
+
+Ask us your questions about serverless functions and lets get to the bottom of this...
 
 <form name="serverless-questions" netlify-honeypot="full-name" action="/thanks" netlify>
   <p class="honey">
