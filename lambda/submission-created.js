@@ -10,7 +10,6 @@ export function handler(event, context, callback) {
       'Date': new Date().toISOString()
     }
   }
-  console.log(airTableData)
   axios({
     method: 'post',
     url: 'https://api.airtable.com/v0/appOflxgjADXC8i6K/Questions',
