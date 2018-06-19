@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 export function handler(event, context, callback) {
+  console.log('Form submission', event)
   const body = JSON.parse(event.body);
   const airTableData = {
     'fields': {
