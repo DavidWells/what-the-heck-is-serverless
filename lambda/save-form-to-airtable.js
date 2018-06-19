@@ -1,11 +1,12 @@
 import axios from 'axios'
 
 export function handler(event, context, callback) {
+  const body = JSON.parse(event.body);
   const airTableData = {
     'fields': {
-      'Email': data.email,
-      'Name': data.name,
-      'Questions': data.questions,
+      'Email': body.email,
+      'Name': body.name,
+      'Questions': body.questions,
       'Date': new Date()
     }
   }
