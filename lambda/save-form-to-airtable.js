@@ -7,7 +7,7 @@ export function handler(event, context, callback) {
       'Email': body.email,
       'Name': body.name,
       'Questions': body.questions,
-      //'Date': new Date()
+      'Date': new Date()
     }
   }
   console.log(airTableData)
@@ -33,7 +33,7 @@ export function handler(event, context, callback) {
     console.log('airtable error')
     console.log(err)
     return callback(null, {
-      body: err
+      body: JSON.stringify(err)
     })
   })
 }
