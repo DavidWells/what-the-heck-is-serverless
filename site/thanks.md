@@ -1,7 +1,6 @@
 ---
 title: Netlify Thanks
 layout: layouts/base.njk
-bodyClass: thanks
 ---
 
 # Wahoo! Thanks for the question!
