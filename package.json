@@ -1,8 +1,8 @@
 {
-  "name": "EleventyOne",
+  "name": "Serverless-Questions",
   "version": "1.0.0",
-  "description": "A project bootstrap for Eleventy sites. With pipelines for Sass, Js, and Lambdas",
-  "author": "Phil Hawksworth",
+  "description": "Collect form responses via Airtable + Serverless functions",
+  "author": "David Wells",
   "license": "MIT",
   "scripts": {
     "start": "yarn run build && yarn run serve",
