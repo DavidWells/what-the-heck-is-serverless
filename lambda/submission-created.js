@@ -1,17 +1,18 @@
 import axios from 'axios'
 
 export function handler(event, context, callback) {
+  // First parse the body and turn into object
   const body = JSON.parse(event.body)
-  console.log(body.payload.data)
+  // Then grab the payload object from body
   const formData = body.payload.data
-
+  // Then set airTableData
   const airTableData = {
-    // Airtable Fields are case sensitive
+    // Note: Airtable Fields are case sensitive & must match your airtable columns
     'fields': {
       'Email': formData.email,
       'Name': formData.name,
       'Questions': formData.questions,
-      // Make sure the Date field is set to Date Type in airtable with "include time field" set
+      // Note: Set Date field to Date Type in airtable with "include time field" toggled on
       'Date': new Date().toISOString()
     }
   }
@@ -24,20 +25,18 @@ export function handler(event, context, callback) {
     },
   })
   .then((response) => {
-    // console.log('airtable response')
-    // console.log(response)
+    console.log('airtable response')
+    console.log(response.data)
     return callback(null, {
       statusCode: 200,
-      body: JSON.stringify({
-        success: true
-      })
+      body: JSON.stringify(response.data)
     })
   })
   .catch((err) => {
-    // console.log('airtable error')
-    // console.log(err)
+    console.log('airtable error')
+    console.log(err)
     return callback(null, {
-      body: JSON.stringify(err)
+      body: err.message
     })
   })
 }
