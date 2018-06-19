@@ -47,8 +47,9 @@ header::after {
   position: absolute;
   width: 100%;
   transform: translateY(-80%);
+  border-bottom: 1px solid $page-color;
   svg {
-    fill: $page-color;;
+    fill: $page-color;
     width: 102%;
     margin-left: -1%;
     height: auto;
