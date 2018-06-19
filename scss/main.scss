@@ -182,6 +182,7 @@ form {
   box-shadow: 0 1px 6px 0 rgba(14,30,37,.12);
   @include bp(mobile) {
     padding: 1.5em;
+    margin-top: 1.5em;
   }
 }
 
