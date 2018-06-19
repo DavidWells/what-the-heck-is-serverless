@@ -9,6 +9,8 @@ export function handler(event, context, callback) {
   const bodyKeys = Object.keys(body)
   console.log('bodyKeys pls', bodyKeys)
 
+  console.log(body.payload)
+
   const airTableData = {
     // Airtable Fields are case sensitive
     'fields': {
