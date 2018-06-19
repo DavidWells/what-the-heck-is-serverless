@@ -25,7 +25,7 @@ header {
   overflow: hidden;
   background: #4e025a;
   text-shadow: 0 2px 20px rgba(0,0,0,.16);
-  height: 300px;
+  height: 265px;
   z-index: 0;
   position: relative;
 }
@@ -69,16 +69,46 @@ main {
   margin-right: auto;
   width: 90%;
   text-align: left;
+  .logos {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+    opacity: 0.85;
+    @include bp(mobile) {
+      flex-direction: column;
+      max-width: 100%;
+      img {
+        width: 60%;
+      }
+    }
+    .plus {
+      font-size: 50px;
+      color: #fff;
+      margin: 0 10px;
+      @include bp(mobile) {
+        font-size: 50px;
+        color: #fff;
+        margin: 0 10px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+    }
+    img {
+      max-height: 115px;
 
-  img {
-    width: 100%;
+    }
   }
 
   @include bp(mid) {
-    width: 600px;
+    width: 800px;
   }
   @include bp(wide) {
-    width: 700px;
+    width: 800px;
   }
 }
 
@@ -101,20 +131,6 @@ h1, h2, h3 {
   font-weight: 600;
   margin-bottom:1em;
   line-height: 1em;
-}
-
-h1.logo {
-  width: 140px;
-  height: 100px;
-  margin-top:2em;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url('/images/logo.png');
-  background-position: 0 0;
-  background-size: 140px;
-  background-repeat: no-repeat;
-  text-indent: -999px;
-  overflow: hidden;
 }
 
 header {
@@ -164,6 +180,9 @@ form {
   border-radius: 8px;
   -webkit-box-shadow: 0 1px 6px 0 rgba(14,30,37,.12);
   box-shadow: 0 1px 6px 0 rgba(14,30,37,.12);
+  @include bp(mobile) {
+    padding: 1.5em;
+  }
 }
 
 input,
@@ -244,4 +263,3 @@ small {
     background-color: #00c2b2;
   }
 }
-
