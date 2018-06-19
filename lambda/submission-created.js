@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export function handler(event, context, callback) {
   console.log('----')
-  console.log(event.payload)
+  console.log(event.body.payload)
   const body = JSON.parse(event.body);
   const airTableData = {
     // Airtable Fields are case sensitive
