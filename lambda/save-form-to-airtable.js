@@ -10,6 +10,7 @@ export function handler(event, context, callback) {
       'Date': new Date()
     }
   }
+  console.log(airTableData)
   axios({
     method: 'post',
     url: 'https://api.airtable.com/v0/appOflxgjADXC8i6K/Questions',
@@ -19,6 +20,7 @@ export function handler(event, context, callback) {
     },
   })
   .then((response) => {
+    console.log(response.data)
     return callback(null, {
       statusCode: 200,
       body: JSON.stringify(response)
@@ -26,6 +28,7 @@ export function handler(event, context, callback) {
   })
   .catch((err) => {
     console.log('AirTable Error', err)
+
     return callback(null, {
       statusCode: err.statusCode,
       body: err.message
