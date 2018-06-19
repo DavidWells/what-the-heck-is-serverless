@@ -25,6 +25,7 @@ export function handler(event, context, callback) {
     function getInfoAndWorksheets(step) {
       doc.getInfo(function(err, info) {
         if(err) {console.log(err);}
+        console.log('info', info)
         console.log('Loaded doc: '+info.title+' by '+info.author.email);
         sheet = info.worksheets[0];
         step();
@@ -59,6 +60,4 @@ export function handler(event, context, callback) {
         body: "serverless function finished its work."
       })
   });
-
-
 }
