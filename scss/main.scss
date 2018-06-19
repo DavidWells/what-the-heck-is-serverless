@@ -46,8 +46,7 @@ header::after {
   overflow: hidden;
   position: absolute;
   width: 100%;
-  transform: translateY(-80%);
-  border-bottom: 1px solid $page-color;
+  transform: translateY(-77%);
   svg {
     fill: $page-color;
     width: 102%;
@@ -229,11 +228,17 @@ textarea {
   height: 6em;
 }
 
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
 
 small {
-  display: block;
+  display: inline-block;
   font-size: 0.7em;
   font-style: italic;
+  margin-left: 5px;
 }
 
 .button {

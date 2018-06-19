@@ -21,7 +21,7 @@ Ask a serverless question!
     <input type="email" name="email" id="email">
   </p>
   <p>
-    <label for="comments">What Questions do you have about the Serverless Landscape?</label>
+    <label for="questions">What Questions do you have about the Serverless Landscape?</label>
     <textarea name="questions" id="questions"></textarea>
   </p>
   <p>
